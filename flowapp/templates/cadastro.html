@@ -1,0 +1,53 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'views.alunos' %}" method="post">
+        {% csrf_token %}
+
+
+        <div class="forms">
+            
+            <div class="nome-aluno">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome">
+            </div>
+            
+            <div class="data-cadastro">
+                <label for="data">Data</label>
+                <input type="date" name="data">
+            </div>
+            
+            <div class="faixa-aluno">
+                <label for="faixa">Faixa</label>
+                <select id="faixa" name="faixa">
+                <option value="Branca">Branca</option>
+                <option value="Azul">Azul</option>
+                <option value="Roxa">Roxa</option>
+                <option value="Marrom">Marrom</option>
+                <option value="Preta">Preta</option>
+            </select>
+            </div>
+            
+            
+            <div class="button">
+                <button type="submit">Marcar Presença</button>
+            </div>
+
+                
+            
+            
+        </div>
+        
+        
+    </form>
+
+        
+</body>
+</html>
