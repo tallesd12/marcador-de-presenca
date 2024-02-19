@@ -5,5 +5,5 @@ class Aluno(models.Model):
     faixa = models.CharField(max_length=50)
     data = models.DateField()
 
-    def __self__(nome):
+    def __self__(self):
         return self.nome

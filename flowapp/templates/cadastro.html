@@ -8,45 +8,49 @@
     <title>Document</title>
 </head>
 <body>
+
+    <section class="area_login"> 
+
     <form action="{% url 'views.alunos' %}" method="post">
         {% csrf_token %}
 
-
         <div class="forms">
-            
-            <div class="nome-aluno">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome">
-            </div>
-            
-            <div class="data-cadastro">
-                <label for="data">Data</label>
-                <input type="date" name="data">
-            </div>
-            
-            <div class="faixa-aluno">
-                <label for="faixa">Faixa</label>
-                <select id="faixa" name="faixa">
-                <option value="Branca">Branca</option>
-                <option value="Azul">Azul</option>
-                <option value="Roxa">Roxa</option>
-                <option value="Marrom">Marrom</option>
-                <option value="Preta">Preta</option>
-            </select>
-            </div>
-            
-            
-            <div class="button">
-                <button type="submit">Marcar Presença</button>
-            </div>
 
-                
+            <div class="img">
+                <img src={% static 'imagens/carlson.png' %}>
+            </div>
             
+                <div class="formularios">
+                    <div class="nome-aluno">
+                        <input type="text" name="nome" placeholder="Nome do Aluno">
+                    </div>
+                    
+                    <div class="data-cadastro">
+                        <input type="date" name="data">
+                    </div>
+                    
+                    <div class="faixa-aluno">
+                        
+                        <select id="faixa" name="faixa">
+                        <option value="Branca">Branca</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Roxa">Roxa</option>
+                        <option value="Marrom">Marrom</option>
+                        <option value="Preta">Preta</option>
+                    </select>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">Marcar Presença</button>
+                    </div>
+                </div>
             
         </div>
         
         
     </form>
+    </section>
+
 
         
 </body>
